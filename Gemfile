@@ -1,2 +1,4 @@
 source 'https://rubygems.org'
-gem 'ya2yaml'
+
+# Specify your gem's dependencies in yamlclean.gemspec
+gemspec
