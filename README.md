@@ -1,6 +1,8 @@
 yamlclean
 =========
 
+[![Build Status](https://travis-ci.org/sminnee/yamlclean.svg?branch=master)](https://travis-ci.org/sminnee/yamlclean)
+
 This simple ruby gem provides a command-line tool for cleaning up yaml files.
 It's based on the ya2yaml library.
 
