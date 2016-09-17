@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+require 'yamlclean'
+puts YamlClean.clean(ARGV[0])
