@@ -2,6 +2,7 @@ en_GB:
   AssetTableField:
     SIZE:                 'Size'
     TYPE:                 'Type'
+  TestTheeHypens: "---"
   BBCodeParser:
     COLORED:              'Coloured text'
     ITALICEXAMPLE:        Italic Text
@@ -29,4 +30,4 @@ en_GB:
   Security:
     ALREADYLOGGEDIN:      'You don''t have access to this page. If you have another account that can access that page, you can log in again.'
     LOGGEDOUT:            'You have been logged out. If you would like to log in again, enter your credentials below.'
-
+---
