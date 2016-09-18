@@ -19,6 +19,43 @@ Usage
 
     $> yamlclean input.yml > output.yml
 
+What does it do?
+----------------
+
+The most significant change that this script makes is reformatting of multi-line strings.
+
+It will convert this:
+
+
+```yml
+en_GB:
+  GroupImportForm:
+    Help2:                '<div class="advanced">
+
+      <h4>Advanced usage</h4>
+
+      <ul><li>Allowed columns: <em>%s</em></li><li>Existing groups are matched by their unique <em>Code</em> value, and updated with any new values from the imported file</li><li>Group hierarchies can be created by using a <em>ParentCode</em> column.</li><li>Permission codes can be assigned by the <em>PermissionCode</em> column. Existing permission codes are not cleared.</li>
+
+      </ul>
+
+      </div>'
+```
+
+To this:
+
+```yml
+en_GB:
+  GroupImportForm:
+    Help2: |-
+        <div class="advanced">
+        <h4>Advanced usage</h4>
+        <ul><li>Allowed columns: <em>%s</em></li><li>Existing groups are matched by their unique <em>Code</em> value, and updated with any new values from the imported file</li><li>Group hierarchies can be created by using a <em>ParentCode</em> column.</li><li>Permission codes can be assigned by the <em>PermissionCode</em> column. Existing permission codes are not cleared.</li>
+        </ul>
+        </div>
+```
+
+This is important because many PHP and JavaScript yaml parsers won't parse the former syntax.
+
 Contributing and development
 ----------------------------
 
