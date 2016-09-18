@@ -1,6 +1,12 @@
 #!/usr/bin/env ruby
 
-require "bundler/setup"
+require 'bundler/setup'
 require 'yamlclean'
+
+if ARGV.size < 1 then
+  puts "Usage: yamlclean (yaml filename)\n\n"
+  puts "Removes unusual syntax structures from yaml file. Outputs new yaml to stdout."
+  exit 1
+end
 
 puts YamlClean.clean(ARGV[0])
