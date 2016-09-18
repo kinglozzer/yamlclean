@@ -6,6 +6,12 @@ module YamlClean
   end
 
   def self.clean(filename)
+    if !File.file?(filename) then
+      raise "File not found: " + filename
+    elsif !File.readable?(filename)
+      raise "Can't read file: " + filename
+    end
+
   	yamlString = IO.read(filename)
   	dirty = YAML.load(yamlString)
 	  cleaned = dirty.ya2yaml(:syck_compatible => true)

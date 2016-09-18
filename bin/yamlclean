@@ -9,4 +9,11 @@ if ARGV.size < 1 then
   exit 1
 end
 
-puts YamlClean.clean(ARGV[0])
+begin
+
+  puts YamlClean.clean(ARGV[0])
+
+rescue RuntimeError => err
+  $stderr.print "There was an error!\n" + err.message + "\n"
+  exit 1
+end
