@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
 
+require "bundler/setup"
 require 'yamlclean'
+
 puts YamlClean.clean(ARGV[0])
