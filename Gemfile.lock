@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    yamlclean (0.1.1)
+    yamlclean (0.1.2)
       ya2yaml
 
 GEM
