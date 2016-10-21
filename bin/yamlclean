@@ -6,7 +6,7 @@ require 'yamlclean'
 if ARGV.size < 1 then
   puts "Usage: yamlclean (yaml filename)\n\n"
   puts "Removes unusual syntax structures from yaml file. Outputs new yaml to stdout."
-  exit 1
+  exit
 end
 
 begin
